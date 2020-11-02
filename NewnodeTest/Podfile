@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '12.0'
+use_modular_headers!
+
+def shared_pods
+
+    pod 'NewNode'
+    
+end
+
+target "NewnodeTest" do
+  shared_pods
+end

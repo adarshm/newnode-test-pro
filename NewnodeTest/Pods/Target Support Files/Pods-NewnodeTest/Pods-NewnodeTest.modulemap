@@ -1,0 +1,6 @@
+module Pods_NewnodeTest {
+  umbrella header "Pods-NewnodeTest-umbrella.h"
+
+  export *
+  module * { export * }
+}

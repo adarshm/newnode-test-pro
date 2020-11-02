@@ -1,0 +1,16 @@
+PODS:
+  - NewNode (1.9.4)
+
+DEPENDENCIES:
+  - NewNode
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - NewNode
+
+SPEC CHECKSUMS:
+  NewNode: 54c5004c9f1304ed9937a8ac9c0e8452c12e007d
+
+PODFILE CHECKSUM: 87bb2914199a414757992fec17208686a244c266
+
+COCOAPODS: 1.8.4
