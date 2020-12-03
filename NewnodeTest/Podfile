@@ -3,9 +3,7 @@ platform :ios, '12.0'
 use_modular_headers!
 
 def shared_pods
-
-    pod 'NewNode'
-    
+#    pod 'NewNode'
 end
 
 target "NewnodeTest" do
