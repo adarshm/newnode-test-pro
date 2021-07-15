@@ -6,7 +6,6 @@
 //
 
 import UIKit
-
 import Foundation
 //import NewNode
 
@@ -34,20 +33,17 @@ class ViewController: UIViewController {
 
         print("API - URL - ", url ?? "")
         guard let apiUrl = URL(string: url) else { return }
-
         var urlRequest = URLRequest(url: apiUrl)
         urlRequest.httpMethod = "GET"
-
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.connectionProxyDictionary = NewNode.connectionProxyDictionary
 //        sessionConfig.waitsForConnectivity = true
+        
         let session = URLSession(configuration: sessionConfig)
-
         let task = session.dataTask(with: urlRequest) {(data: Data?, response: URLResponse?, error: Error?) in
 
             if let data = data {
-                let str = String(decoding: data, as: UTF8.self)
-                print("Response", str)
+                print("Response", String(decoding: data, as: UTF8.self))
             }
             if let error = error {
                 print("Error", error)
