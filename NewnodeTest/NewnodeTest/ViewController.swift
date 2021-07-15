@@ -28,7 +28,6 @@ class ViewController: UIViewController {
         }
     }
 
-
     func newnodeGetRequest(url: String!,
                         parameters: [String: String] = [:],
                         responseCallBack: ResponseCallBack!) {
@@ -44,21 +43,17 @@ class ViewController: UIViewController {
 //        sessionConfig.waitsForConnectivity = true
         let session = URLSession(configuration: sessionConfig)
 
-
         let task = session.dataTask(with: urlRequest) {(data: Data?, response: URLResponse?, error: Error?) in
 
             if let data = data {
                 let str = String(decoding: data, as: UTF8.self)
                 print("Response", str)
             }
-
             if let error = error {
                 print("Error", error)
             }
 
-
             let httpResponse = response as? HTTPURLResponse
-
             // Make sure the session is cleaned up.
             session.invalidateAndCancel()
             // Invoke the callback with the result.
